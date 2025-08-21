@@ -28,8 +28,8 @@ This project implements both:
 
 | r code and README               | Description                                                        |
 |--------------------|--------------------------------------------------------------------|
-| `model_static.R`    | Static SIS model with fixed β, γ and MH inference                  |
-| `model_timevarying.R` | Time-varying β(t), γ(t) inference via component-wise MH sampling |
+| `claims_model_static.R`    | Static SIS model with fixed β, γ and MH inference                  |
+| `claims_model_time_varying.R` | Time-varying β(t), γ(t) inference via component-wise MH sampling |
 | `README.md`         | Project overview (this file)                                      |
 
 | Figures                                                                                   | Description                                           |
@@ -74,3 +74,23 @@ This project implements both:
    ```bash
    git clone https://github.com/yourusername/bayesian-claims-SIS-model.git
    cd bayesian-claims-SIS-model
+
+---
+
+## Summary of Findings
+
+- **Posterior inference successfully recovers true parameters**  
+  For both static and time-varying models, the Metropolis-Hastings algorithm accurately estimates the transmission (`β`) and resolution (`γ`) rates from simulated claim data.
+
+- **Time-varying model captures dynamic trends**  
+  The model tracks evolving claim rates over time by allowing `β(t)` and `γ(t)` to vary, improving realism and forecasting accuracy in non-stationary environments.
+
+- **Posterior credible intervals are well-calibrated**  
+  The 95% credible intervals for `β(t)` and `γ(t)` consistently include the true simulated paths, validating the uncertainty quantification.
+
+- **Predictive performance aligns with observations**  
+  Simulated claim trajectories based on posterior estimates closely match the observed number of new claims, both in shape and scale.
+
+- **Component-wise MH sampling is effective**  
+  Updating parameters one at a time allows flexible inference for high-dimensional latent paths (e.g., full trajectories of `β(t)`), with reasonable acceptance rates.
+
