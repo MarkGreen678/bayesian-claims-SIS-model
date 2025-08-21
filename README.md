@@ -94,3 +94,7 @@ This project implements both:
 - **Component-wise MH sampling is effective**  
   Updating parameters one at a time allows flexible inference for high-dimensional latent paths (e.g., full trajectories of `β(t)`), with reasonable acceptance rates.
 
+- **Drift priors improve inference precision** \
+  Including a prior drift term helps regularize the posterior, leading to narrower credible intervals and improved tracking of underlying parameter trends over time.
+
+
