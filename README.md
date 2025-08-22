@@ -53,7 +53,7 @@ This project implements both:
 - Exponential priors (static) and random walk priors (time-varying)
 - Posterior summaries with credible intervals
 - Posterior predictive simulations
-- Clear visualizations: parameter traces, posteriors, and claim paths
+- Visualizations: parameter traces, posteriors, autocorrelation plots and claim paths.
 
 ---
 
@@ -65,6 +65,7 @@ This project implements both:
  - Observed vs expected new claims under the time-varying SIS model
  - Posterior predictive simulations: multiple forward-simulated claim trajectories
  - Simulated claims path using posterior draws (static SIS model)
+ - Autocorrelation plots for both static and time-varying models
 
 ---
 
@@ -96,5 +97,8 @@ This project implements both:
 
 - **Drift priors improve inference precision** \
   Including a prior drift term helps regularize the posterior, leading to narrower credible intervals and improved tracking of underlying parameter trends over time.
+
+- **Posterior samples exhibit low autocorrelation** \
+  The MCMC chains for both static and time-varying parameters demonstrate rapidly decaying autocorrelation, indicating efficient exploration of the posterior space and yielding high effective sample sizes.
 
 
