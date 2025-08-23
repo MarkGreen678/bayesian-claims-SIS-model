@@ -26,24 +26,32 @@ This project implements both:
 
 ## Contents
 
-| r code and README               | Description                                                        |
+| R code and README               | Description                                                        |
 |--------------------|--------------------------------------------------------------------|
 | `claims_model_static.R`    | Static SIS model with fixed β, γ and MH inference                  |
 | `claims_model_time_varying.R` | Time-varying β(t), γ(t) inference via component-wise MH sampling |
 | `README.md`         | Project overview (this file)                                      |
 
-| Figures                                                                                   | Description                                           |
-| -------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| `Histogram_of_Posterior_of_Beta_(Static_SIS_model).png`                                | Posterior distribution of fixed β                     |
-| `Histogram_of_Posterior_of_Gamma_(Static_SIS_model).png`                               | Posterior distribution of fixed γ                     |
-| `Trace_of_Beta_(Static_SIS_model).png`                                                 | MCMC trace plot for fixed β                           |
-| `Trace_of_Gamma_(Static_SIS_model).png`                                                | MCMC trace plot for fixed γ                           |
-| `Plot_of_Simulated_claims_path_(Static_SIS_model).png`                                 | Simulated claims path over time (Static SIS model)    |
-| `Plot_of_Posterior_Predictive_Claim_Paths_for_five_sims_(Static_SIS_model).png`        | Posterior predictive claim paths (static model, five simulations)       |
-| `Plot_number_of_Active_and_Susceptible_Policyholders_over_Time_(Static_SIS_model).png` | SIS model dynamics (S and I)                          |
-| `Plot_of_Posterior_Mean_and_95pc_CI_for_beta(t).png`                                   | Posterior mean and 95% CI for β(t)                    |
-| `Plot_of_Posterior_Mean_and_95pc_CI_for_gamma(t).png`                                  | Posterior mean and 95% CI for γ(t)                    |
-| `Plot_Observed_vs_Expected_New_Claims_(Time-Varying_SIS_Model).png`                    | Observed vs predicted new claims (time-varying model) |
+| Figures for Static SIS Model                                                           | Description                                             |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `Histogram_of_Posterior_of_Beta_(Static_SIS_model).png`                                | Posterior distribution of fixed β                       |
+| `Histogram_of_Posterior_of_Gamma_(Static_SIS_model).png`                               | Posterior distribution of fixed γ                       |
+| `Trace_of_Beta_(Static_SIS_model).png`                                                 | MCMC trace plot for fixed β                             |
+| `Trace_of_Gamma_(Static_SIS_model).png`                                                | MCMC trace plot for fixed γ                             |
+| `Autocorrelation_plot_of_Beta_Samples_(Static_SIS_model).png`                          | Autocorrelation of β samples (static model)             |
+| `Autocorrelation_plot_of_Gamma_Samples_(Static_SIS_model).png`                         | Autocorrelation of γ samples (static model)             |
+| `Plot_of_Simulated_claims_path_(Static_SIS_model).png`                                 | Simulated claims path over time (Static SIS model)      |
+| `Plot_of_Posterior_Predictive_Claim_Paths_for_five_sims_(Static_SIS_model).png`        | Posterior predictive claim paths (static model, 5 sims) |
+| `Plot_number_of_Active_and_Susceptible_Policyholders_over_Time_(Static_SIS_model).png` | SIS model dynamics (S and I)                            |
+
+| Figures for Time-varying SIS Model                                                 | Description                                              |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| `Plot_of_Posterior_Mean_and_95pc_CI_for_beta(t)_with_drift_(with_prior_drift).png` | Posterior mean and 95% CI for β(t) (with prior drift)    |
+| `Plot_of_Posterior_Mean_and_95pc_CI_for_beta(t).png`                               | Posterior mean and 95% CI for β(t) (without prior drift) |
+| `Plot_of_Posterior_Mean_and_95pc_CI_for_gamma(t).png`                              | Posterior mean and 95% CI for γ(t)                       |
+| `Autocorrelation_plot_for_beta_at_selected_time_points.png`                        | Autocorrelation of β(t) samples at selected time points  |
+| `Autocorrelation_plot_for_gamma_at_selected_time_points.png`                       | Autocorrelation of γ(t) samples at selected time points  |
+| `Plot_Observed_vs_Expected_New_Claims_(Time-Varying_SIS_Model).png`                | Observed vs predicted new claims (time-varying model)    |
 
 ---
 
@@ -54,7 +62,7 @@ This project implements both:
 - Posterior summaries with credible intervals
 - Posterior predictive simulations
 - Visualizations: parameter traces, posteriors, autocorrelation plots and claim paths.
-
+- 
 ---
 
 ## Example Outputs
